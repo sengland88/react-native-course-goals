@@ -18,8 +18,6 @@ export default function App() {
   }
 
   function addGoalHandler(enteredGoalText) {
-    console.log("clicked");
-    console.log(enteredGoalText);
     setCourseGoals((currentCourseGoals) => [
       ...currentCourseGoals,
       { text: enteredGoalText, id: Math.random().toString() },
@@ -28,7 +26,6 @@ export default function App() {
   }
 
   function deleteGoalHandler(id) {
-    console.log("pressed to delete!");
     setCourseGoals((currentCourseGoals) => {
       return currentCourseGoals.filter((goal) => goal.id !== id);
     });
